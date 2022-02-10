@@ -1,0 +1,323 @@
+@import "colors", "animation", "responsive";
+.hero-section{
+    background: url('/public/assets/uluru.jpg'); 
+    box-shadow: inset 8rem 8rem 10rem $box-shadow, inset -8rem -8rem 10rem $box-shadow;
+    height: 100vh; 
+    width: 100%;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-size: cover;
+    
+    .hero-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 4rem;
+        ul{
+            list-style: none;
+        }
+        .hero-links{
+            display: flex;
+            gap: 0 1rem;            
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 400;
+
+                    &:hover{
+                        border-bottom: 4px solid $brown;
+                    }
+                }
+            }
+            
+        }
+        .hero-menu{
+            display: none;
+            span{
+                color: $white;
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    .hero-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80%;
+        gap: 2rem 0;
+        h2{
+            font-size: 8rem;
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            animation: titleLoading 2s ease-out;
+            &::after{
+                content: '';
+                height: 10px;
+                width: 100px;
+                background-color: $brown;
+                transform: translate(2rem, -2rem);
+            }
+        }
+        a{
+            background-color: $white;
+            padding: .5rem 2rem;
+            color: $brown;
+        }
+        h2.hero-title{
+            font-size: 5rem;
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            animation: titleLoading 2s ease-out;
+            &::after{
+                content: '';
+                height: 10px;
+                width: 100px;
+                background-color: $brown;
+                transform: translate(0);
+            }
+        }
+    }
+}
+
+.middle{
+    padding: 4rem;
+    .content-info, .content-biggest-cities{
+        padding: 3rem 0;
+    }
+    .content-info{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        .content-info-img{
+            width: 35%;
+            background: url('/public/assets/kangaroo.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        .content-info-text{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                color: $brown;
+            }
+            p{
+                text-align: justify;
+                padding-top: 2rem;
+                color: $cardText;
+            }
+        }
+    }
+    .content-biggest-cities{
+        h2{
+            text-align: center;
+            padding: 0 0 4rem;
+            color: $brown;
+        }
+        .content-biggest-cities-slides{
+            max-width:100%; 
+            height: 50vh;
+            .content-biggest-cities-slides-item{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                img{
+                    animation: activeSlide 1s ease-in;
+                    object-fit: cover;
+                    width: 50%;
+                    border-radius: 0 .5rem 0;
+                }
+                .content-biggest-cities-slides-item-text{
+                    width: 50%;
+                    padding: 2rem;
+                    h3{
+                        padding: 3rem 0;
+                        font-size: 1.35rem;
+                        color: $brown;
+                    }
+                    p{
+                        text-align: justify;
+                        color: $cardText;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .content-map{
+        h2{
+            color: $brown;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        .content-map-content{
+            align-items: center;
+            display: flex;
+            .content-map-image{
+                width: 65%;
+                path{
+                    cursor: pointer;
+                }
+            }
+            .content-map-text{
+                flex-direction: column;
+                gap: 1rem 0;
+                width: 35%;
+                ul{
+                    display: grid;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        padding: 1rem;
+                        margin: .25rem 0;
+                        border: 1px solid brown;
+                        gap: 0 1rem;
+                        cursor: pointer;
+                        color: brown;                 
+                        &:hover{
+                            background-color: brown;
+                            color: #fff;         
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(8rem, 1fr));
+        gap: 1.25rem;
+        margin: 3rem 0;
+        .card {
+            background-color: $white;
+            border-radius: .5rem;
+            filter: drop-shadow(2px 4px 6px $dropShadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .header {
+                margin-bottom: .25rem;
+                font-weight: 600;
+                padding: 2rem 2rem 1rem;
+                color: $brown;
+                h2{
+                    sup{
+                        font-size:medium;
+                    }
+                }
+            }
+            .body {
+                font-size: .8rem;
+                color: $cardText;
+                padding: 1rem 2rem 2rem;
+                text-align: justify;
+                
+            }
+            .link{
+                width: 100%;
+                text-align: center;
+                background: $brown;
+                border-radius: 0 0 .5rem .5rem;
+                padding: .75rem;
+                a{
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+            
+            &:hover{
+                transform: translateY(4px);
+                filter: none;
+                background-color: $brown;
+                .header, .body{
+                    color: $white;
+                }
+                .header{
+                    svg{
+                        circle, path, rect{
+                            stroke: $white !important;
+                        }
+                    }
+                }
+                .link{
+                    background: $white;
+                    border: .125px solid $brown;
+                    a{
+                        color: $brown;
+                    }
+                }
+            }
+        }
+        
+    }
+    .middle-city-title, .middle-city-subtitle{
+        color: $brown;
+    }
+    .middle-city-subtitle{
+        margin: 2rem 0;
+    }
+    .search-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        justify-content: center;
+        padding: .5rem 1rem;
+        input[type="search"] {
+            font-size: .95rem;
+            width: 100%;
+            padding: .5rem 1rem;
+        }
+    }
+}
+
+.backToTop{
+    background-color: $white;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    right: .5rem;
+    bottom: .5rem;
+    position: fixed;
+    z-index: 1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $brown;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.menu-box, .hide{
+    display: none;
+}
+
+.hero-canberra, .hero-melbourne, .hero-sydney{
+    background-position: center;
+    height: 60vh; 
+}
+
+.hero-melbourne{
+    background-image: url(/public/assets/melbourne.jpg); 
+}
+
+.hero-sydney{
+    background-image: url(/public/assets/sydney.jpg);
+}
+
+.hero-canberra{
+    background-image: url(/public/assets/canberra.jpg);
+}

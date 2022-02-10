@@ -1,0 +1,782 @@
+@media screen and (max-width: 400px) { 
+    .hero-section{        
+        .hero-nav{
+            padding: .5rem 2rem !important;
+            .hero-links{
+                display: none !important;                
+            }
+            .hero-menu{
+                display: block !important;
+            }
+            .hero-logo{                
+                li{
+                    img{
+                        width: 95%;
+                    }
+                }   
+            }
+        }
+        
+        .hero-content{
+            padding: 0 3rem;
+            height: 70% !important;
+            h2{
+                font-size: 3.75rem !important;
+                &::after{
+                    transform: translate(0, -1rem) !important;
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 0 !important;
+        .content-info, .content-biggest-cities{
+            padding: 0 !important;
+        }
+        .content-info{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem !important;
+
+            .content-info-text{
+                padding-bottom: 2rem;
+            }
+            .content-info-img, .content-info-text{
+                width: 100% !important;
+                
+            }
+            .content-info-text{
+                h2{
+                    padding-top: 2rem;
+                }
+                
+            }
+        }
+        .content-biggest-cities{
+            padding: 3rem 2rem !important;
+            h2{
+                text-align: center;
+                padding: 3rem 0 !important;
+                color: $brown;
+            }
+            .content-biggest-cities-slides{
+                height: auto !important;
+                .content-biggest-cities-slides-item{
+                    flex-direction: column;
+                    img{
+                        width: 100% !important;
+                    }
+                    .content-biggest-cities-slides-item-text{
+                        width: 100% !important;
+                        padding: 0 !important;    
+                        h3{
+                            padding: 1rem 0 !important;
+                        }                    
+                    }
+                }
+            }
+        }
+        .content-map{
+            h2{
+                color: $brown;
+                padding: 3rem 0 2rem;
+                text-align: center;
+            }
+            .content-map-content{
+                flex-direction: column !important;
+                              
+                .content-map-image{
+                    width: 100% !important;
+                    path{
+                        cursor: pointer;
+                    }
+                }
+                .content-map-text{
+                    flex-direction: column;
+                    padding: 2rem !important;
+                    width: 100% !important; 
+                    gap: 1rem;
+                    ul{
+                        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+                        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 1rem;
+                        li{ 
+                            transform: skewY(0) scale(1) !important;                
+                        }
+                    }
+                }
+            }
+        }
+        .content-cards {
+            display: grid;
+            margin: 3rem 2rem !important;
+            .card {
+                background-color: $white;
+                border-radius: .5rem;
+                filter: drop-shadow(2px 4px 6px $dropShadow);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                .header {
+                    margin-bottom: .25rem;
+                    font-weight: 600;
+                    padding: 2rem 2rem 1rem;
+                    color: $brown;
+                    h2{
+                        sup{
+                            font-size:medium;
+                        }
+                    }
+                }
+                .body {
+                    font-size: .8rem;
+                    color: $cardText;
+                    padding: 1rem 2rem 2rem;
+                    text-align: justify;
+                    
+                }
+                .link{
+                    width: 100%;
+                    text-align: center;
+                    background: $brown;
+                    border-radius: 0 0 .5rem .5rem;
+                    padding: .75rem;
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+                
+                &:hover{
+                    transform: translateY(4px);
+                    filter: none;
+                    background-color: $brown;
+                    .header, .body{
+                        color: $white;
+                    }
+                    .header{
+                        svg{
+                            circle, path, rect{
+                                stroke: $white !important;
+                            }
+                        }
+                    }
+                    .link{
+                        background: $white;
+                        border: .125px solid $brown;
+                        a{
+                            color: $brown;
+                        }
+                    }
+                }
+            }
+        }
+        .middle-city-title, .middle-city-subtitle{
+            color: $brown;
+        }
+        .middle-city-title{
+            padding: 3rem 2rem 0;
+        }
+        .middle-city-subtitle{
+            margin: 2rem !important;
+        }
+        .search-wrapper {
+            padding: .5rem 2rem !important;
+        }
+    }
+    .menu-box{
+        display: none;
+        height: 100%;
+        background: $brown;
+        z-index: 100;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            list-style: none;
+            gap: .75rem 0;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+                span{
+                    font-weight: 600;
+                    color: $white;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    footer{
+        ul{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 401px) and (max-width: 575.98px) { 
+    .hero-section{        
+        .hero-nav{
+            padding: .5rem 2rem !important;
+            .hero-links{
+                display: none !important;                
+            }
+            .hero-menu{
+                display: block !important;
+            }
+        }
+        
+        .hero-content{
+            padding: 0 3rem;
+            height: 70% !important;
+            h2{
+                font-size: 4rem !important;
+                &::after{
+                    transform: translate(0, -1rem) !important;
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 0 !important;
+        .content-info, .content-biggest-cities{
+            padding: 0 !important;
+        }
+        .content-info{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem !important;
+
+            .content-info-text{
+                padding-bottom: 2rem;
+            }
+            .content-info-img, .content-info-text{
+                width: 100% !important;
+                
+            }
+            .content-info-text{
+                h2{
+                    padding-top: 2rem;
+                }
+                
+            }
+        }
+        .content-biggest-cities{
+            padding: 3rem 2rem !important;
+            h2{
+                text-align: center;
+                padding: 3rem 0 !important;
+                color: $brown;
+            }
+            .content-biggest-cities-slides{
+                height: auto !important;
+                .content-biggest-cities-slides-item{
+                    flex-direction: column;
+                    img{
+                        width: 100% !important;
+                    }
+                    .content-biggest-cities-slides-item-text{
+                        width: 100% !important;
+                        padding: 0 !important;    
+                        h3{
+                            padding: 1rem 0 !important;
+                        }                    
+                    }
+                }
+            }
+        }
+        .content-map{
+            h2{
+                color: $brown;
+                padding: 3rem 0 2rem;
+                text-align: center;
+            }
+            .content-map-content{
+                flex-direction: column !important;
+                              
+                .content-map-image{
+                    width: 100% !important;
+                    path{
+                        cursor: pointer;
+                    }
+                }
+                .content-map-text{
+                    flex-direction: column;
+                    padding: 2rem !important;
+                    width: 100% !important; 
+                    gap: 1rem;
+                    ul{
+                        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+                        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 1rem;
+                        li{ 
+                            transform: skewY(0) scale(1) !important;                
+                        }
+                    }
+                }
+            }
+        }
+        .content-cards {
+            display: grid;
+            margin: 3rem 2rem !important;
+            .card {
+                background-color: $white;
+                border-radius: .5rem;
+                filter: drop-shadow(2px 4px 6px $dropShadow);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                .header {
+                    margin-bottom: .25rem;
+                    font-weight: 600;
+                    padding: 2rem 2rem 1rem;
+                    color: $brown;
+                    h2{
+                        sup{
+                            font-size:medium;
+                        }
+                    }
+                }
+                .body {
+                    font-size: .8rem;
+                    color: $cardText;
+                    padding: 1rem 2rem 2rem;
+                    text-align: justify;
+                    
+                }
+                .link{
+                    width: 100%;
+                    text-align: center;
+                    background: $brown;
+                    border-radius: 0 0 .5rem .5rem;
+                    padding: .75rem;
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+                
+                &:hover{
+                    transform: translateY(4px);
+                    filter: none;
+                    background-color: $brown;
+                    .header, .body{
+                        color: $white;
+                    }
+                    .header{
+                        svg{
+                            circle, path, rect{
+                                stroke: $white !important;
+                            }
+                        }
+                    }
+                    .link{
+                        background: $white;
+                        border: .125px solid $brown;
+                        a{
+                            color: $brown;
+                        }
+                    }
+                }
+            }
+        }
+        .middle-city-title, .middle-city-subtitle{
+            color: $brown;
+        }
+        .middle-city-title{
+            padding: 3rem 2rem 0;
+        }
+        .middle-city-subtitle{
+            margin: 2rem !important;
+        }
+        .search-wrapper {
+            padding: .5rem 2rem !important;
+        }
+    }
+    .menu-box{
+        display: none;
+        height: 100%;
+        background: $brown;
+        z-index: 100;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            list-style: none;
+            gap: .75rem 0;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+                span{
+                    font-weight: 600;
+                    color: $white;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    footer{
+        ul{
+            display: none;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-section{        
+        .hero-nav{
+            padding: .5rem 2rem !important;
+            .hero-menu{
+                display: none !important;
+            }
+        }
+        
+        .hero-content{
+            padding: 0 3rem;
+            height: 70% !important;
+            h2{
+                font-size: 4rem !important;
+                &::after{
+                    transform: translate(0, -1rem) !important;
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 2rem !important;
+        .content-info, .content-biggest-cities{
+            padding: 0 !important;
+        }
+        .content-info{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem !important;
+    
+            .content-info-text{
+                padding-bottom: 2rem;
+                h2{
+                    padding-top: 2rem;
+                }
+            }
+            .content-info-img, .content-info-text{
+                width: 100% !important;
+            }
+            .content-info-img{
+                height: 60vh !important;            
+            }
+        }
+        .content-biggest-cities{
+            padding: 3rem 2rem !important;
+            h2{
+                text-align: center;
+                padding: 3rem 0 !important;
+                color: $brown;
+            }
+            .content-biggest-cities-slides{
+                height: auto !important;
+                .content-biggest-cities-slides-item{
+                    flex-direction: column;
+                    img{
+                        width: 100% !important;
+                    }
+                    .content-biggest-cities-slides-item-text{
+                        width: 100% !important;
+                        padding: 0 !important;    
+                        h3{
+                            padding: 1rem 0 !important;
+                        }                    
+                    }
+                }
+            }
+        }
+        .content-map{
+            h2{
+                color: $brown;
+                padding: 3rem 0 2rem;
+                text-align: center;
+            }
+            .content-map-content{
+                flex-direction: column !important;
+                              
+                .content-map-image{
+                    width: 100% !important;
+                    path{
+                        cursor: pointer;
+                    }
+                }
+                .content-map-text{
+                    flex-direction: column;
+                    padding: 2rem !important;
+                    width: 100% !important; 
+                    gap: 1rem;
+                    ul{
+                        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+                        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 1rem;
+                        li{ 
+                            transform: skewY(0) scale(1) !important;                
+                        }
+                    }
+                }
+            }
+        }
+        .middle-city-title{
+            padding: 3rem 2rem 0;
+        }
+        .middle-city-subtitle{
+            margin: 2rem !important;
+        }
+        
+    }
+    .menu-box{
+        display: none !important;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    .hero-section{        
+        .hero-nav{
+            padding: .5rem 2rem !important;
+            .hero-menu{
+                display: none !important;
+            }
+        }
+        
+        .hero-content{
+            padding: 0 3rem;
+            height: 70% !important;
+            h2{
+                font-size: 6rem !important;
+                &::after{
+                    transform: translate(0, -1rem) !important;
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 2rem !important;
+        .content-info, .content-biggest-cities{
+            padding: 0 !important;
+        }
+        .content-info{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0 !important;
+
+            .content-info-img, .content-info-text{
+                width: 100% !important;
+            }
+            .content-info-text{
+                padding: 2rem 2rem 0rem 2rem;
+            }
+            .content-info-img{
+                height: 70vh !important;
+            }
+        }
+        .content-biggest-cities{
+            padding: 3rem 2rem !important;
+            h2{
+                text-align: center;
+                padding: 3rem 0 !important;
+                color: $brown;
+            }
+            .content-biggest-cities-slides{
+                height: auto !important;
+                .content-biggest-cities-slides-item{
+                    flex-direction: column;
+                    img{
+                        width: 100% !important;
+                    }
+                    .content-biggest-cities-slides-item-text{
+                        width: 100% !important;
+                        padding: 0 !important;    
+                        h3{
+                            padding: 1rem 0 !important;
+                        }                    
+                    }
+                }
+            }
+        }
+        .content-map{
+            h2{
+                color: $brown;
+                padding: 3rem 0 2rem;
+                text-align: center;
+            }
+            .content-map-content{
+                flex-direction: column !important;
+                              
+                .content-map-image{
+                    width: 100% !important;
+                }
+                .content-map-text{
+                    flex-direction: column;
+                    padding: 2rem !important;
+                    width: 100% !important; 
+                    gap: 1rem;
+                    ul{
+                        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+                        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 1rem;
+                        li{ 
+                            transform: skewY(0) scale(1) !important;                
+                        }
+                    }
+                }
+            }
+        }
+        .content-cards {
+            margin: 3rem 2rem !important;
+        }
+        .middle-city-title{
+            padding: 3rem 2rem 0;
+        }
+        .middle-city-subtitle{
+            margin: 2rem !important;
+        }
+        
+       
+    }
+    .menu-box{
+        display: none !important;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .hero-section{        
+        .hero-nav{
+            padding: .5rem 2rem !important;
+            .hero-menu{
+                display: none !important;
+            }
+        }
+        .hero-content{
+            padding: 0 3rem;
+            height: 70% !important;
+            h2{
+                font-size: 7rem !important;
+                &::after{
+                    transform: translate(0, -1rem) !important;
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 0 !important;
+        .content-info, .content-biggest-cities{
+            padding: 0 !important;
+        }
+        .content-info{
+            padding: 2rem  !important;
+
+            .content-info-img, .content-info-text{
+                width: 40% !important;
+            }
+            .content-info-text{
+                padding: 2rem 2rem 0;
+            }
+            .content-info-img{
+                height: 70vh !important;
+            }
+        }
+        .content-biggest-cities{
+            padding: 3rem 2rem !important;
+            h2{
+                text-align: center;
+                padding: 3rem 0 !important;
+                color: $brown;
+            }
+            .content-biggest-cities-slides{
+                height: auto !important;
+            }
+        }
+        .content-map{
+            h2{
+                color: $brown;
+                padding: 3rem 0 2rem;
+                text-align: center;
+            }
+            .content-map-content{
+                flex-direction: column !important;
+                              
+                .content-map-image{
+                    width: 100% !important;
+                    path{
+                        cursor: pointer;
+                    }
+                }
+                .content-map-text{
+                    flex-direction: column;
+                    padding: 2rem !important;
+                    width: 100% !important; 
+                    gap: 1rem;
+                    ul{
+                        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+                        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 1rem;
+                        li{ 
+                            transform: skewY(0) scale(1) !important;                
+                        }
+                    }
+                }
+            }
+        }
+        .content-cards {
+            margin: 3rem 2rem !important;
+        }
+        .middle-city-title, .middle-city-subtitle{
+            color: $brown;
+        }
+        .middle-city-title{
+            padding: 3rem 2rem 0;
+        }
+
+        .middle-city-subtitle{
+            margin: 2rem !important;
+        }
+        .search-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            justify-content: center;
+            padding: .5rem 2rem;
+        }
+        input[type="search"] {
+            font-size: .95rem;
+            width: 100%;
+            margin-top: 1rem;
+            padding: .5rem 1rem;
+        }
+    }
+    .menu-box{
+        display: none !important;
+    }
+ }

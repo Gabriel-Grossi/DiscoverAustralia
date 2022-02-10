@@ -1,0 +1,23 @@
+@keyframes titleLoading{
+    0%{
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes activeSlide{
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 50%;
+    }
+}

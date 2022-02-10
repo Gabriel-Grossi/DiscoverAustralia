@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="/public/assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/main/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <title>Cities | DiscoverAustralia</title>
+</head>
+
+<body>
+    <section class="hero-section" style="
+  background-image: url(/public/assets/melbourne.jpg); 
+  height: 60vh; background-position: center; ">
+        <div class="hero-nav">
+            <ul class="hero-logo">
+                <li><img src="/public/assets/logo.svg" alt="Logo"></li>
+            </ul>
+            <ul class="hero-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cities.html">Cities</a></li>
+            </ul>
+            <menu class="hero-menu">
+                <span class="material-icons-round">
+                    menu
+                </span>
+            </menu>
+        </div>
+        <div class="hero-content" style="height: auto; gap: 0;">
+            <h2 class="hero-title">Cities</h2>
+        </div>
+    </section>
+    <div class="middle">
+        <div class="search-wrapper">
+            <input id="cityListSearch" class="btn btn-default loggingSearch" type="search"
+                placeholder="Search a city" />
+        </div>
+        <div class="content-cards"></div>
+    </div>
+    <div class="backToTop" id="scrollTop" onclick="scrollToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="brown" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+        </svg>
+    </div>
+
+    <menu class="menu-box">
+        <ul>
+            <li><a href="/src/index.html">Home</a></li>
+            <li><a href="/src/cities.html">Cities</a></li>
+            <li class="close-menu">
+                <span class="material-icons-round">
+                    close
+                </span>
+            </li>
+        </ul>
+    </menu>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts/scrollTop.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/city.js"></script>
+</body>
+
+</html>
